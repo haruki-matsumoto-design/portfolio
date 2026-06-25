@@ -1,0 +1,344 @@
+/* =========================
+   Reset
+========================= */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+html{
+  scroll-behavior:smooth;
+}
+body{
+  font-family:"Yu Gothic","Yu Gothic UI",sans-serif;
+  color:#222;
+  background:#fffbe3;
+  line-height:1.8;
+}
+h2 {
+  margin-top: 150px;
+}
+a{
+  text-decoration:none;
+  color:inherit;
+}
+ul{
+  list-style:none;
+}
+/* =========================
+   Common
+========================= */
+.container{
+  width:min(90%,1100px);
+  margin:auto;
+}
+.section-title{
+  text-align:center;
+  font-size:2rem;
+  margin-bottom:50px;
+}
+.section-title{
+    margin-bottom: 30px;
+}
+.about-text{
+    margin-bottom: 20px;
+}
+.bg-light{
+  background:#fffbe3;
+}
+.btn{
+  display:inline-block;
+  padding:14px 32px;
+  background:#ffee90;
+  color:#222;
+  border-radius:999px;
+  transition:.3s;
+  margin-bottom: 50px;
+}
+.btn:hover{
+  transform:translateY(-3px);
+}
+/* =========================
+   Header
+========================= */
+.header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:100;
+  background:#ffee90;
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid #eee;
+}
+.header .container{
+  height:80px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.logo{
+  font-size:1.2rem;
+  font-weight:bold;
+}
+.nav{
+  display:flex;
+  gap:30px;
+}
+.nav a{
+  transition:.3s;
+}
+.nav a:hover{
+  color:#ffeebe;
+}
+/* =========================
+   Hero
+========================= */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  background:
+  radial-gradient(
+    circle at top right,
+    rgba(79,124,255,.15),
+    transparent 40%
+  );
+}
+.hero-inner{
+  max-width:700px;
+}
+.hero-sub{
+  color:#222;
+  font-weight:bold;
+  margin-bottom:15px;
+}
+.hero-title{
+  font-size: clamp(2.8rem, 5vw, 4rem);
+  line-height:1.3;
+  margin-bottom:25px;
+}
+.hero-text{
+  font-size:1.1rem;
+  margin-bottom:35px;
+}
+/* =========================
+   About
+========================= */
+.about-text{
+  max-width:800px;
+  margin:0 auto 20px;
+}
+/* =========================
+   Skills
+========================= */
+#skills {
+  background-color: #fffbe3;
+}
+.skill-grid{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+.skill-card{
+  background:#fff;
+  padding:25px;
+  border-radius:16px;
+  box-shadow:
+  0 5px 20px rgba(0,0,0,.05);
+  transition:.3s;
+}
+.skill-card:hover{
+  transform:translateY(-5px);
+}
+.skill-card h3{
+  color:#222;
+  margin-bottom:10px;
+}
+/* =========================
+   Works
+========================= */
+.works-grid{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(350px,1fr));
+  gap:30px;
+}
+.work-card{
+  background:#fff;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:
+  0 5px 20px rgba(0, 0, 0, .06);
+  transition:.3s;
+}
+.work-card:hover{
+  transform:translateY(-8px);
+}
+.work-image{
+  height:220px;
+  background:#dfe5ee;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#666;
+}
+.work-body{
+  padding:24px;
+}
+.work-body h3{
+  margin-bottom:10px;
+}
+.work-body p{
+  margin-bottom:15px;
+}
+.work-body a{
+  color:#222;
+  font-weight:bold;
+}
+.work-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+/* =========================
+   Banner
+========================= */
+.banner-grid{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+.banner-item:hover{
+  transform:translateY(-5px);
+}
+.banner-item{
+  border-radius:12px;
+  overflow:hidden;
+  background:#fff;
+  transition:.3s;
+}
+.banner-text{
+  padding:12px;
+  font-size:14px;
+  color:#555;
+}
+.travel-banner{
+  height:250px;
+  object-fit:cover;
+  object-position:left top;
+}
+/* =========================
+   Contact
+========================= */
+.contact{
+  text-align:center;
+}
+.contact p{
+  margin-bottom:25px;
+}
+/* =========================
+   Footer
+========================= */
+.footer{
+  padding:30px;
+  text-align:center;
+  border-top:1px solid #ddd;
+  background:#ffee90;
+}
+/* =========================
+   Animation
+========================= */
+.fade{
+  opacity:0;
+  transform:translateY(30px);
+  transition:.8s;
+}
+.fade.show{
+  opacity:1;
+  transform:translateY(0);
+}
+.header.active{
+  box-shadow:0 4px 12px rgba(0,0,0,.1);
+} 
+/* wark バナー */
+.banner-item img{
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius:12px;
+}
+/* topボタン */
+#topBtn{
+  position:fixed;
+  right:30px;
+  bottom:30px;
+  width:90px;
+  height:45px;
+  border:2px solid #ffee90;
+  border-radius:999px;
+  background:#fff;
+  color:#222;
+  font-size:14px;
+  font-weight:bold;
+  cursor:pointer;
+  opacity:0;
+  visibility:hidden;
+  transition:.3s;
+  box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
+#topBtn.show{
+  opacity:1;
+  visibility:visible;
+}
+#topBtn:hover{
+  transform:translateY(-3px);
+  background:#ffee90;
+}
+.ais {
+  padding-bottom: 0px;
+}
+.sss {
+  padding-bottom: 100px;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media(max-width:768px){
+  .header .container{
+    flex-direction:column;
+    justify-content:center;
+    gap:15px;
+    height:auto;
+    padding:20px 0;
+  }
+  #about {
+  padding-top: 0;
+  margin-top: 0;
+}
+  .nav{
+    gap:20px;
+  }
+  .section{
+    padding:60px 0;
+    bottom: 0;
+  }
+  .hero{
+    text-align:center;
+  }
+  .hero-title{
+    font-size:2.5rem;
+    margin-bottom: 10px;
+  }
+  .works-grid{
+    grid-template-columns:1fr;
+  }
+  h2 {
+    padding-top: 0;
+    margin-top: 0;
+  }
+}
