@@ -795,3 +795,9 @@ footer a {
     display: none;
   }
 }
+/* うまーい */
+@media screen and (max-width: 1364px) {
+  .inb {
+    background-image: none;
+  }
+}
