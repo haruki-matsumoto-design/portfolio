@@ -1,0 +1,797 @@
+@charset "utf-8";
+*{
+    text-decoration: none;
+}
+/* header */
+header a {   
+    color: #fff;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    background: #ff0000;
+    background-image: url(../img/tenshu.png), url(../img/tenshu.png);
+    background-repeat: no-repeat;
+    background-position: 8% 5px , 92% 5px;
+    background-size: 90px;
+}
+.index,.menu,.notice,.store,.inquiry {
+    margin: auto;
+    font-weight: bold;
+}
+.menu,.notice,.store,.inquiry {
+    padding-top: 15px;
+}
+.menu,.store {
+    margin: auto -100px;
+}
+.ra-menmazokutaro {
+    margin-bottom: 0;
+}
+.index {
+    text-align: center;
+}
+a {
+  color: #666;
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: #333;
+}
+/* メインはじめのスライドショー */
+.img-frame{
+   position: relative;
+   width: 100%;
+   height: 560px;
+   overflow: hidden;
+   margin: 0 auto;
+}
+.img-01, .img-02, .img-03{
+   position: absolute;
+   top:0;
+   left:0;
+   width: 100%;
+   height: 100%;
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+.img-01{
+   background-image: url('../img/slid01.webp');
+   animation: slide-animation-01 24s infinite;
+   
+}
+.img-02{
+   background-image: url('../img/slid02.png');
+   animation: slide-animation-02 24s infinite;
+}
+.img-03{
+   background-image: url('../img/slid03.png');
+   animation: slide-animation-03 24s infinite;
+}
+@keyframes slide-animation-01 {
+    0% {opacity: 1; transform: scale(1.0);}
+  30% {opacity: 1;}
+  40% {opacity: 0; transform: scale(1.15);}
+  90% {opacity: 0}
+100% {opacity: 1; transform: scale(1.0);}
+}
+@keyframes slide-animation-02 {
+    0% {opacity: 0;}
+  30% {opacity: 0; transform: scale(1.1);}
+  40% {opacity: 1;}
+  60% {opacity: 1;}
+  70% {opacity: 0; transform: scale(1.0);}
+100% {opacity: 0;}
+}
+@keyframes slide-animation-03 {
+    0% {opacity: 0;}
+  60% {opacity: 0;  transform: scale(1.0);}
+  70% {opacity: 1;}
+  90% {opacity: 1;}
+100% {opacity: 0; transform: scale(1.1);}
+}
+.msg-01, .msg-02, .img-03{
+    text-shadow: 2px 2px 3px #000, -1px -1px 3px #000;
+}
+.msg-03{
+   z-index:1;
+}
+.msg{
+   font-size: 20px;
+   color: #fff;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50% , -50%);
+}
+.msg-01, .msg-02{
+    text-shadow: 2px 2px 3px #000, -1px -1px 3px #000;
+}
+.img-03.cover::after{
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+}
+.msg-03{
+   z-index:1;
+}
+.inb {
+  background-image: url(../img/umai.png);
+  background-repeat: no-repeat;
+  background-size: 16%;
+  background-position: 95% 650px;
+}
+/* お店のこだわり  スライドショー */
+.kao {
+  width: 110px;
+  height: 110px;
+  position: relative;
+  top: 40px;
+  right: 285px;
+}
+.kao2 {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  bottom: 90px;
+  right: 150px;
+}
+.slider {
+  position: relative;
+  width: 800px;
+  height: 400px;
+  margin: auto;
+  overflow: hidden;
+  padding-top: 25px;
+}
+.slides {
+  display: flex;
+  width: 400%;
+  transition: transform 0.5s ease;
+}
+.slide {
+  width: 25%;
+  flex-shrink: 0;
+  position: relative;
+}
+.slide img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+.slide-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  text-shadow:
+        0 0 5px #000,
+        0 0 10px #000,
+        0 0 15px #000;
+  white-space: nowrap;
+  pointer-events: none; 
+}
+/* こだわりページ */
+.h1 {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 250px;
+    width: 100%;
+    background-image: url(../img/h1.jpeg);
+    background-size: 140%;
+    background-position: center;
+    position: relative;
+}
+.h11 {
+    text-align: center;
+    color: #fff;
+}
+.ko1,.ko2,.ko3,.ko4 {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  display: block;
+}
+.ko11,.ko12,.ko21,.ko22,.ko31,.ko32,.ko41,.ko42 {
+  display: inline-block;
+  padding: 0 20px;
+  border-left: 5px solid #ff0000;
+}
+.ko11,.ko21,.ko31,.ko41 {
+    margin-bottom: 0;
+}
+.ko12,.ko22,.ko32,.ko42 {
+    margin-top: 0;
+}
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 12px 16px;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+}
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+}
+  /* メニュー */
+  .rice,.kaedama {
+    padding-left: 150px;
+  }
+  .imm {
+    background-image: url(../img/okawari.png);
+    background-repeat: no-repeat;
+    background-position: 130px 1190px;
+    background-size: 10%;
+  }
+  .h1-2 {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 250px;
+    width: 100%;
+    background-image: url(../img/hh1.png);
+    background-size: 140%;
+    background-position: center;
+}
+.menu-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+.menu-section h2 {
+  text-align: center;
+  font-size: 40px;
+}
+.menu-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px 30px;
+}
+.menu-item {
+  text-align: center;
+}
+.menu-item img {
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+.name {
+  margin-top: 10px;
+  font-size: 25px;
+}
+.price {
+  margin-top: 5px;
+  font-size: 18px;
+  color: #666;
+}
+.tyasyura,.kara,.ton {
+  position: relative;
+}
+.no1 {
+  position: absolute;
+  top: 600px;
+  right: 110px;
+  height: 100px;
+  width: 100px;
+}
+.no2 {
+  position: absolute;
+  top: 1070px;
+  right: 110px;
+  height: 100px;
+  width: 100px;
+}
+.no3 {
+  position: absolute;
+  top: 600px;
+  right: 860px;
+  height: 100px;
+  width: 100px;
+}
+h2 span {
+    color: #ff0000;
+}
+.me {
+    text-align: center;
+    margin-top: 0;
+    padding-top: 0;
+}
+.ra {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+  /* 概要 */
+.h1ei,.h1osi,.h1otoi,.koe,.saki {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.h1ei::before,.h1ei::after,.h1osi::before,.h1osi::after,.h1otoi::before,.h1otoi::after,.koe::before,.koe::after,.saki::before,.saki::after {
+  content: "";
+  width: 80px;
+  height: 1px;
+  background-color: #333 ;
+}
+.koe {
+  margin-top: 0;
+}
+.h1osi {
+  margin-bottom: 0;
+}
+.header02 a {   
+    color: #fff;
+}
+.header02 {
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    padding-bottom: 20px;
+    background: #ff0000;
+    background-image: url(../img/susuru.png), url(../img/susuru.png);
+    background-repeat: no-repeat;
+    background-position: 10% 5px , 90% 5px; 
+    background-size: 90px;
+}
+.ei,.osi,.otoi {
+  font-weight: bold;
+  padding-top: 30px;
+  padding-bottom: 15px;
+  margin: 0;
+}
+.ei {
+  margin-left: 400px;
+}
+.otoi {
+  margin-right: 400px;
+}
+a {
+  color: #666;
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: #333;
+}
+.h1-3 {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 250px;
+    width: 100%;
+    background-image: url(../img/hhh1.webp);
+    background-size: 140%;
+    background-position: center;
+}
+.kaedama {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 120px;
+}
+.rice{
+    margin-top: 0;
+    margin-left: 135px;
+}
+.menu-section {
+    padding-bottom: 50px;
+}
+/* ほんとのメイン */
+/* 牛富士山桃温泉イチゴ */
+.usi {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  top: 120%;
+  left: 65%;
+}
+.hujisan {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  top: 330%;
+  left: 5%;
+}
+/* .momo {
+  background-size: 100px;
+  background-position: 930px 180px;
+} */
+.onsen {  
+  width: 140px;
+  height: 140px;
+  position: absolute;
+  top: 270%;
+  left: 80%;
+}
+.itigo {
+  width: 170px;
+  height: 170px;
+  position: absolute;
+  top: 395%;
+  left: 20%;
+}
+.main {
+  margin-right: 10%;
+  margin-left: 10%;
+}
+.area-list{
+  display:flex;
+  flex-wrap: wrap;
+  gap:30px;
+  justify-content:center;
+  align-items:flex-start;
+}
+.area-box{
+  width: calc((100% - 60px) / 3);
+  box-sizing: border-box;
+  width:380px;
+  border:1px solid #ccc;
+  background:#fff;
+}
+.area-box h2{
+  margin:0;
+  padding:20px 15px;
+  font-size:20px;
+  border-bottom:1px solid #ff4d00;
+}
+.area-box h2 span{
+  color:#ff4d00;
+}
+.shop{
+  padding:15px;
+  border-bottom:1px solid #333;
+}
+.shop-name{
+  font-size:18px;
+  margin-bottom:10px;
+}
+.status{
+  color:#ff4d00;
+}
+.kyoutuu,.jikan {
+  font-size: 20px;
+  text-align: center;
+}
+.h111 {
+  border-bottom: 2px solid #000;
+}
+.span {
+  color: #f00;
+}
+.ul {
+  margin-left: 20%;
+}
+.ul p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/* 問い合わせ */
+.required{
+    background:#f00;
+    color:#fff;
+    font-size:12px;
+    padding:2px 6px;
+    border-radius:3px;
+}
+.contact{
+    width: 80%;
+    max-width: 1000px;
+    margin: 100px auto;
+}
+.contact h1{
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 50px;
+    position: relative;
+}
+.contact h1::before,
+.contact h1::after{
+    content: "";
+    display: inline-block;
+    width: 80px;
+    height: 1px;
+    background: #333;
+    vertical-align: middle;
+    margin: 0 20px;
+}
+.contact-lead{
+    text-align: center;
+    line-height: 2;
+    margin-bottom: 50px;
+}
+.contact-box{
+    background: #fff;
+    padding: 50px;
+    border: 1px solid #ccc;
+}
+.form-item{
+    margin-bottom: 30px;
+}
+.form-item label{
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-left: 5px solid red;
+    padding-left: 10px;
+}
+.form-item input,
+.form-item select,
+.form-item textarea{
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+textarea{
+    resize: vertical;
+}
+.btn-area{
+    text-align:center;
+    margin-top:40px;
+}
+.btn-area input[type="image"]{
+    width:250px;
+    transition:.3s;
+    width: 100px;
+    height: 100px;
+}
+.btn-area input[type="image"]:hover{
+    opacity:.8;
+    transform:scale(1.05);
+}
+.contact-info{
+    margin-top: 80px;
+    text-align: center;
+}
+.contact-info h3{
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+/* topへ戻るボタン */
+.pagetop {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  padding: 5px 15px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+.top_gazo {
+    height: 70px;
+    width: 70px;
+}
+/* footer */
+footer {
+    padding: 0 10%;
+    background: #ff0000;
+    background-image: url(../img/nomihosi.png), url(../img/nomihosi.png);
+    background-repeat: no-repeat;
+    background-position: 20% 80px , 80% 80px; 
+    background-size: 90px;
+    gap: 10%;
+    margin: 0;
+}
+footer a {   
+    color: #fff;
+}
+.footer2 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 300px;
+    padding-bottom: 20px;
+}
+.footer .ra-menmazokutaro {
+    padding-top: 30px;
+}
+.footer_Manzoku {
+    margin-top: 3px;
+}
+.SNSicon {
+    text-align: center;
+}
+.SNSicon_instagram,.SNSicon_x,.SNSicon_fb,.SNSicon_line,.SNSicon_youtube {
+    height: 40px;
+    width: 40px;
+    margin: 0 15px;
+    padding-bottom: 30px;
+}
+/* お客様の声 */
+  .voice-section{
+    padding: 50px 20px;
+}
+.voice-section h1{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.voice-list{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.voice-card{
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.star{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.voice-text{
+    line-height: 1.8;
+}
+.voice-user{
+    text-align: right;
+    margin-top: 15px;
+    color: #666;
+}
+/* スマホサイズ */
+@media screen and (max-width: 768px){
+  h1 {
+    font-size: 30px;
+  }
+  .header02{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+  }
+/* ヘッダー */
+  .header{
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
+    background-image: none;
+  }
+  .header02{
+    background-image:none;
+  }
+  .menu,
+  .notice{
+    margin: 0;
+    padding: 0;
+  }
+  /* index */
+  .img-frame {
+    width: 100%;
+    height: 250px;
+  }
+  /* スライダー */
+  .slider{
+    width:100%;
+    height:250px;
+  }
+  .slide img{
+    height:250px;
+  }
+  .slide-text{
+    font-size:24px;
+  }
+  /* うまーい */
+  .inb {
+  background-image: none;
+}
+/* こだわり画像 */
+  .ko1,.ko2,.ko3,.ko4{
+    height:250px;
+  }
+  /* フッター */
+  .footer2{
+    flex-direction: column;
+    margin: 0;
+    text-align: center;
+    gap: 15px;
+  }
+  footer{
+    background-image:none;
+  }
+  /* ランキング画像 */
+  .no1 {
+  position: absolute;
+  top: 600px;
+  right: 10px;
+  height: 50px;
+  width: 50px;
+}
+.rice,.kaedama {
+    padding-left: 0;
+  }
+  .in {
+    background-image: url(../img/okawari.png);
+    background-repeat: no-repeat;
+    background-position: 30px 990px;
+    background-size: 15%;
+  }
+.no2 {
+  position: absolute;
+  top: 970px;
+  right: 10px;
+  height: 50px; 
+  width: 50px;
+}
+.no3 {
+  position: absolute;
+  top: 600px;
+  right: 320px;
+  height: 50px;
+  width: 50px;
+}
+  /* 店舗一覧 */
+  .area-box{
+    width:100%;
+  } 
+/* 概要 */
+  .header02{
+    flex-direction: column;
+    align-items: center;
+  }
+  .ei,
+  .osi,
+  .otoi{
+    margin: 0;
+  }
+  /* お知らせ */
+  .ul{
+    margin-left:0;
+    padding-left:20px;
+  }
+  /* お客様の声 */
+  .voice-card{
+    width: 100%;
+    }
+  /* 問い合わせ */
+   .contact-box{
+    padding:20px;
+  }
+/* h123画像 */
+  .h1,
+  .h1-2,
+  .h1-3{
+    height:150px;
+}
+/* topへ */
+.pagetop{
+    right: 10px;
+    bottom: 10px;
+  }
+/* topへがぞう */
+  .top_gazo{
+    width: 45px;
+  }
+}
+/* タブレットサイズ　ぐらい */
+@media screen and (max-width: 1364px){
+  /* ほんとのメイン */
+  /* 牛富士山桃温泉イチゴ */
+  .usi,
+  .hujisan,
+  .onsen,
+  .itigo {
+    display: none;
+  }
+}
