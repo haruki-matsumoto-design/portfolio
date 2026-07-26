@@ -11,10 +11,6 @@ header a {
     justify-content: space-between;
     padding-bottom: 20px;
     background: #ff0000;
-    background-image: url(../img/tenshu.png), url(../img/tenshu.png);
-    background-repeat: no-repeat;
-    background-position: 8% 5px , 92% 5px;
-    background-size: 90px;
 }
 .index,.menu,.notice,.store,.inquiry {
     margin: auto;
@@ -119,27 +115,7 @@ a:hover {
 .msg-03{
    z-index:1;
 }
-.inb {
-  background-image: url(../img/umai.png);
-  background-repeat: no-repeat;
-  background-size: 16%;
-  background-position: 95% 650px;
-}
 /* お店のこだわり  スライドショー */
-.kao {
-  width: 110px;
-  height: 110px;
-  position: relative;
-  top: 40px;
-  right: 285px;
-}
-.kao2 {
-  width: 60px;
-  height: 60px;
-  position: relative;
-  bottom: 90px;
-  right: 150px;
-}
 .slider {
   position: relative;
   width: 800px;
@@ -234,12 +210,6 @@ a:hover {
   .rice,.kaedama {
     padding-left: 150px;
   }
-  .imm {
-    background-image: url(../img/okawari.png);
-    background-repeat: no-repeat;
-    background-position: 130px 1190px;
-    background-size: 10%;
-  }
   .h1-2 {
     display: flex;
     justify-content: center; 
@@ -285,27 +255,6 @@ a:hover {
 .tyasyura,.kara,.ton {
   position: relative;
 }
-.no1 {
-  position: absolute;
-  top: 600px;
-  right: 110px;
-  height: 100px;
-  width: 100px;
-}
-.no2 {
-  position: absolute;
-  top: 1070px;
-  right: 110px;
-  height: 100px;
-  width: 100px;
-}
-.no3 {
-  position: absolute;
-  top: 600px;
-  right: 860px;
-  height: 100px;
-  width: 100px;
-}
 h2 span {
     color: #ff0000;
 }
@@ -346,11 +295,6 @@ h2 span {
     justify-content: center;
     gap: 10%;
     padding-bottom: 20px;
-    background: #ff0000;
-    background-image: url(../img/susuru.png), url(../img/susuru.png);
-    background-repeat: no-repeat;
-    background-position: 10% 5px , 90% 5px; 
-    background-size: 90px;
 }
 .ei,.osi,.otoi {
   font-weight: bold;
@@ -393,40 +337,7 @@ a:hover {
 .menu-section {
     padding-bottom: 50px;
 }
-/* ほんとのメイン */
-/* 牛富士山桃温泉イチゴ */
-.usi {
-  width: 250px;
-  height: 250px;
-  position: absolute;
-  top: 120%;
-  left: 65%;
-}
-.hujisan {
-  width: 250px;
-  height: 250px;
-  position: absolute;
-  top: 330%;
-  left: 5%;
-}
-/* .momo {
-  background-size: 100px;
-  background-position: 930px 180px;
-} */
-.onsen {  
-  width: 140px;
-  height: 140px;
-  position: absolute;
-  top: 270%;
-  left: 80%;
-}
-.itigo {
-  width: 170px;
-  height: 170px;
-  position: absolute;
-  top: 395%;
-  left: 20%;
-}
+
 .main {
   margin-right: 10%;
   margin-left: 10%;
@@ -583,9 +494,6 @@ textarea{
 footer {
     padding: 0 10%;
     background: #ff0000;
-    background-image: url(../img/nomihosi.png), url(../img/nomihosi.png);
-    background-repeat: no-repeat;
-    background-position: 20% 80px , 80% 80px; 
     background-size: 90px;
     gap: 10%;
     margin: 0;
@@ -710,37 +618,9 @@ footer a {
   footer{
     background-image:none;
   }
-  /* ランキング画像 */
-  .no1 {
-  position: absolute;
-  top: 600px;
-  right: 10px;
-  height: 50px;
-  width: 50px;
-}
 .rice,.kaedama {
     padding-left: 0;
   }
-  .in {
-    background-image: url(../img/okawari.png);
-    background-repeat: no-repeat;
-    background-position: 30px 990px;
-    background-size: 15%;
-  }
-.no2 {
-  position: absolute;
-  top: 970px;
-  right: 10px;
-  height: 50px; 
-  width: 50px;
-}
-.no3 {
-  position: absolute;
-  top: 600px;
-  right: 320px;
-  height: 50px;
-  width: 50px;
-}
   /* 店舗一覧 */
   .area-box{
     width:100%;
@@ -782,22 +662,5 @@ footer a {
 /* topへがぞう */
   .top_gazo{
     width: 45px;
-  }
-}
-/* タブレットサイズ　ぐらい */
-@media screen and (max-width: 1364px){
-  /* ほんとのメイン */
-  /* 牛富士山桃温泉イチゴ */
-  .usi,
-  .hujisan,
-  .onsen,
-  .itigo {
-    display: none;
-  }
-}
-/* うまーい */
-@media screen and (max-width: 1364px) {
-  .inb {
-    background-image: none;
   }
 }
